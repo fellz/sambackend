@@ -15,7 +15,7 @@
                  [org.postgresql/postgresql "9.4-1201-jdbc41"]]
   :min-lein-version "2.0.0"
   :main ^:skip-aot backend.core
-  :target-path "target/%s"
+  :uberjar-name "backend.jar"
   :plugins [[lein-auto "0.1.3"]]
   :profiles {:uberjar {:main backend.core, :aot :all
                        :jvm-opts ["-Dclojure.compiler.direct-linking=true"]}})
