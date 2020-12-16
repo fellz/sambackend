@@ -17,5 +17,5 @@
   :main ^:skip-aot backend.core
   :target-path "target/%s"
   :plugins [[lein-auto "0.1.3"]]
-  :profiles {:uberjar {:aot :all
+  :profiles {:uberjar {:main backend.core, :aot :all
                        :jvm-opts ["-Dclojure.compiler.direct-linking=true"]}})
