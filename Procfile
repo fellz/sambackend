@@ -1,1 +1,1 @@
-web: java $JVM_OPTS -jar target/backend-standalone.jar
+web: java $JVM_OPTS -jar -cp target/backend.jar clojure.main -m backend.core $PORT
