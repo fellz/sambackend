@@ -115,7 +115,7 @@
 
   (route/not-found "Error, page not found!"))
 (def app-routes-cors
-  (wrap-cors app-routes :access-control-allow-origin [#"*"]
+  (wrap-cors app-routes :access-control-allow-origin [#".*"]
                         :access-control-allow-methods [:get :put :post :delete]))
 (defn -main
   "I don't do a whole lot ... yet."
