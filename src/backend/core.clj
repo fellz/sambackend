@@ -15,13 +15,17 @@
             [clj-time.local :as l])
   (:gen-class))
 
-(def app-db {:dbtype "postgresql"
-               :dbname "samurai"
-               :host "localhost"
-               :user "postgres"
-               :password "postgres"
-               :ssl true
-               :sslfactory "org.postgresql.ssl.NonValidatingFactory"})
+(def app-dbb {:dbtype "postgresql"
+              :dbname "samurai"
+              :host "localhost"
+              :user "postgres"
+              :password "postgres"
+              :ssl true
+              :sslfactory "org.postgresql.ssl.NonValidatingFactory"})
+
+
+(def app-db (or (System/getenv "DATABASE_URL")
+              app-dbb))
 
 ;; Helper functions
 (defn as-date-string [date]
