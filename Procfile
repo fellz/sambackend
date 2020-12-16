@@ -1,1 +1,1 @@
-java $JVM_OPTS -jar target/sambackend-standalone.jar
+web: java $JVM_OPTS -jar target/sambackend-standalone.jar
